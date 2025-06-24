@@ -1,0 +1,59 @@
+body {
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+#main {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 30px;
+    width: 550px;
+    height: 600px;
+}
+
+h1 {
+    color: hsl(187, 24%, 22%);
+}
+
+p {
+    color: hsl(186, 15%, 59%);
+}
+
+#f_n_input, #l_n_input, #e_input, #text_area{
+    /* border-color: hsl(169, 82%, 27%);
+    border-style: solid; */
+    border-radius: 5px;
+    border: 1px, solid, hsl(169, 82%, 27%);
+}
+
+#names {
+    display: flex;
+    gap: 10px; /* расстояние между блоками */
+}
+
+#f_n_input, #l_n_input {
+    width: 270px;
+    height: 40px;
+}
+
+#e_input {
+    width: 550px;
+    height: 40px;
+}
+
+#submit {
+    background-color: hsl(169, 82%, 27%);
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#submit_text {
+    color: hsl(0, 0%, 100%);
+}

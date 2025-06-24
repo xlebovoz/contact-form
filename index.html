@@ -2,51 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Contact Us
+  <div id="main">
+    <h1 style="margin-top: 0; margin-bottom: 15px;">Contact Us</h1>
 
-  First Name
-  This field is required
+    <div id="names">
+      <div id="f_name">
+        <p style="margin-bottom: 5px;">First Name</p>
+        <input type="text" id="f_n_input">
 
-  Last Name
-  This field is required
+        <p style="display: none;">This field is required</p>
+      </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+      <div id="l_name">
+        <p style="margin-bottom: 5px;">Last Name</p>
+        <input type="text" id="l_n_input">
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+        <p style="display: none;">This field is required</p>
+      </div>
+    </div>
 
-  Message
-  This field is required
+    <div id="email" style="margin-top: 25px;">
+      <p style="margin-bottom: 5px;">Email Address</p>
+      <input type="text" id="e_input">
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+      <p style="display: none;">Please enter a valid email address</p>
+      <p style="display: none;">This field is required</p>
+    </div>
 
-  Submit
+    <div>
+      <p>Query Type</p>
+      <input type="radio" class="radio">General Enquiry
+      <input type="radio" class="radio">Support Request
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <p style="display: none;">Please select a query type</p>
+    </div>
+
+    <div id="area">
+      <p>Message</p>
+      <textarea id="text_area"></textarea>
+
+      <p style="display: none;">This field is required</p>
+    </div>
+
+    <div id="yes">
+    <input type="checkbox">I consent to being contacted by the team
+    <p style="display: none;">To submit this form, please consent to being contacted</p>
+    </div>
+
+    <div id="submit">
+      <span id="submit_text">Submit</span>
+    </div>
+
+    <div id="end" style="display: none;">
+      Message Sent!
+      Thanks for completing the form. We'll be in touch soon!
+    </div>
+
   </div>
+
 </body>
 </html>
