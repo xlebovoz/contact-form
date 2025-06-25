@@ -26,24 +26,27 @@ p {
 }
 
 #f_n_input, #l_n_input, #e_input, #text_area{
-    /* border-color: hsl(169, 82%, 27%);
-    border-style: solid; */
     border-radius: 5px;
-    border: 1px, solid, hsl(169, 82%, 27%);
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+#f_n_input:hover, #l_n_input:hover, #e_input:hover, #text_area:hover {
+    border: 1px solid hsl(169, 88%, 44%);
+    cursor: pointer;
 }
 
 #names {
     display: flex;
-    gap: 10px; /* расстояние между блоками */
+    gap: 10px;
 }
 
 #f_n_input, #l_n_input {
-    width: 270px;
+    width: 265px;
     height: 40px;
 }
 
 #e_input {
-    width: 550px;
+    width: 545px;
     height: 40px;
 }
 
@@ -52,8 +55,49 @@ p {
     text-align: center;
     border-radius: 5px;
     padding: 15px;
+    margin-top: 40px;
+
+    transition: all 0.3s ease;
+}
+
+#submit:hover {
+    background-color: hsl(169, 82%, 18%);
+    cursor: pointer;
 }
 
 #submit_text {
     color: hsl(0, 0%, 100%);
+}
+
+#main_radio {
+    display: flex;
+    gap: 10px;
+}
+
+.radio_div {
+    border-radius: 5px;
+    border: 1px solid hsl(169, 82%, 27%);
+    width: 270px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    color: hsl(186, 15%, 59%);
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.radio {
+    margin-right: 10px;
+    border: 1px solid hsl(186, 15%, 59%);
+}
+
+#text_area {
+    width: 545px;
+    height: 100px;
+    max-width: 545px;
+    max-height: 100px;
+    min-width: 545px;
+    min-height: 100px;
+    margin-bottom: 40px;
 }

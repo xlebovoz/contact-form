@@ -40,22 +40,24 @@
     </div>
 
     <div>
-      <p>Query Type</p>
-      <input type="radio" class="radio">General Enquiry
-      <input type="radio" class="radio">Support Request
+      <p style="margin-bottom: 5px;">Query Type</p>
+      <div id="main_radio">
+        <div class="radio_div"><input type="radio" class="radio">General Enquiry</div>
+        <div class="radio_div"><input type="radio" class="radio">Support Request</div>
+      </div>
 
       <p style="display: none;">Please select a query type</p>
     </div>
 
     <div id="area">
-      <p>Message</p>
+      <p style="margin-bottom: 5px;">Message</p>
       <textarea id="text_area"></textarea>
 
       <p style="display: none;">This field is required</p>
     </div>
 
     <div id="yes">
-    <input type="checkbox">I consent to being contacted by the team
+    <input type="checkbox" id="checkbox"><span style="color:hsl(186, 15%, 59%);">I consent to being contacted by the team</span>
     <p style="display: none;">To submit this form, please consent to being contacted</p>
     </div>
 
