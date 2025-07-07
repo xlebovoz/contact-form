@@ -1,83 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="main.js"></script>
 
-  <div id="main">
-    <h1 style="margin-top: 0; margin-bottom: 15px;">Contact Us</h1>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-    <div id="names">
-      <div id="f_name">
-        <p style="margin-bottom: 5px;">First Name</p>
-        <input type="text" id="f_n_input">
-
-        <p style="visibility: hidden; margin-top: 0;">This field is required</p>
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="submit-successful" aria-live="polite">
+        <div class="title-icon">
+          <img src="assets/images/icon-success-check.svg" alt="" />
+          <h1>Message Sent!</h1>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
       </div>
+      <form action="" novalidate>
+        <header>
+          <legend>Contact Us</legend>
+        </header>
+        <div class="full-name">
+          <div>
+            <label for="name">First Name</label>
+            <input
+              type="text"
+              class="name"
+              name="name"
+              required
+              aria-required="true"
+              aria-describedby="name-required"
+              aria-invalid="false"
+            />
+            <span id="name-required" class="name-required" role="alert"
+              >This field is required</span
+            >
+          </div>
+          <div>
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              class="last-name"
+              name="last-name"
+              required
+              aria-required="true"
+              aria-describedby="last-name-required"
+              aria-invalid="false"
+            />
+            <span
+              id="last-name-required"
+              class="last-name-required"
+              role="alert"
+              >This field is required</span
+            >
+          </div>
+        </div>
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          class="email"
+          name="email"
+          required
+          autocomplete="email"
+          aria-required="true"
+          aria-describedby="email-error email-required"
+          aria-invalid="false"
+        />
+        <span id="email-error" class="email-error" role="alert"
+          >Please enter a valid email address</span
+        >
+        <span id="email-required" class="email-required" role="alert"
+          >This field is required</span
+        >
+        <div
+          class="radio-group"
+          role="radiogroup"
+          aria-labelledby="query-type-label"
+        >
+          <label id="query-type-label">Query Type</label>
+          <div class="radio-options">
+            <div class="radio-outline">
+              <input
+                type="radio"
+                id="general"
+                name="query-type"
+                required
+                aria-required="true"
+                aria-describedby="radio-required"
+              />
+              <label for="general">General Enquiry</label>
+            </div>
+            <div class="radio-outline">
+              <input
+                type="radio"
+                id="support"
+                name="query-type"
+                required
+                aria-required="true"
+                aria-describedby="radio-required"
+              />
+              <label for="support">Support Request</label>
+            </div>
+          </div>
+          <span id="radio-required" class="radio-required" role="alert"
+            >Please select a query type</span
+          >
+        </div>
 
-      <div id="l_name">
-        <p style="margin-bottom: 5px;">Last Name</p>
-        <input type="text" id="l_n_input">
-
-        <p style="visibility: hidden; margin-top: 0;">This field is required</p>
-      </div>
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          class="message"
+          id="message"
+          required
+          aria-required="true"
+          aria-describedby="message-required"
+          aria-invalid="false"
+        ></textarea>
+        <span id="message-required" class="message-required" role="alert"
+          >This field is required
+        </span>
+        <div class="check-box">
+          <input
+            type="checkbox"
+            class="checkbox"
+            name="checkbox"
+            id="checkbox"
+            required
+            aria-required="true"
+            aria-describedby="checkbox-required"
+          />
+          <label for="checkbox"
+            >I hereby consent to being contacted by the team
+          </label>
+        </div>
+        <span id="checkbox-required" class="checkbox-required" role="alert"
+          >To submit this form, please consent to being contacted</span
+        >
+        <button>Submit</button>
+      </form>
     </div>
-
-    <div id="email" style="margin-top: -25px;">
-      <p style="margin-bottom: 5px;">Email Address</p>
-      <input type="text" id="e_input">
-
-      <p id="topText" style="
-        position: absolute; 
-        margin: 0; 
-        visibility: hidden;">Please enter a valid email address</p>
-      
-      <p id="bottomText" style="
-        position: absolute; 
-        margin: 0; 
-        visibility: hidden;">This field is required</p>
-    </div>
-
-    <div style="margin-top: 25px;">
-      <p style="margin-bottom: 5px;">Query Type</p>
-      <div id="main_radio">
-        <div class="radio_div"><input type="radio" class="radio">General Enquiry</div>
-        <div class="radio_div"><input type="radio" class="radio">Support Request</div>
-      </div>
-
-      <p style="visibility: hidden;">Please select a query type</p>
-    </div>
-
-    <div id="area" style="margin-top: -25px;">
-      <p style="margin-bottom: 5px;">Message</p>
-      <textarea id="text_area"></textarea>
-
-      <p style="visibility: hidden;">This field is required</p>
-    </div>
-
-    <div id="yes">
-    <input type="checkbox" id="checkbox" style="cursor: pointer;"><span style="color:hsl(186, 15%, 59%); cursor: pointer;">I consent to being contacted by the team</span>
-    <p style="visibility: hidden; margin-top: 0;">To submit this form, please consent to being contacted</p>
-    </div>
-
-    <div id="submit">
-      <span id="submit_text">Submit</span>
-    </div>
-
-    <div id="end" style="visibility: hidden;">
-      Message Sent!
-      Thanks for completing the form. We'll be in touch soon!
-    </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
